@@ -21,7 +21,7 @@ class Aplicacion extends Model
 
     // Crear/Actuallizar
     public function crud_aplicaciones(Request $request, $evento) {
-        $db = DB::select("exec portallog.pr_crud_app_aplicaciones ?,?,?,?,?,?,?,?,?,?,?,?", 
+        $db = DB::select("exec pr_crud_app_aplicaciones ?,?,?,?,?,?,?,?,?,?,?,?", 
                         [
                             $evento,
                             $request->input('aplicacion_id'),
@@ -40,7 +40,7 @@ class Aplicacion extends Model
     }
 
     public function get_aplicaciones(Request $request) {
-        $db = DB::select("exec portallog.pr_get_app_aplicaciones ?,?",
+        $db = DB::select("exec pr_get_app_aplicaciones ?,?",
                         [
                             $request->input('filtro'),
                             $request->input('filtro') + 200
@@ -49,12 +49,12 @@ class Aplicacion extends Model
     }
 
     public function get_aplicaciones_full() {
-        $db = DB::select("exec portallog.pr_get_app_aplicaciones_full");
+        $db = DB::select("exec pr_get_app_aplicaciones_full");
         return $db;
     }
 
     public function get_tipo_aplicaciones() {
-        $db = DB::select("exec portallog.pr_get_app_tipo_aplicaciones");
+        $db = DB::select("exec pr_get_app_tipo_aplicaciones");
         return $db;
     }
 }
