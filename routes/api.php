@@ -34,9 +34,9 @@ Route::group(['middleware' => ['jwt.verify']], function() {
     Route::get('/aplicacion/getTipoAplicaciones', [AplicacionController::class, 'getTipoAplicaciones']);
 
     // Menu
-    Route::post('/menu/getMenus', [MenuController::class, 'getMenus']);
-    Route::post('/menu/crearMenus', [MenuController::class, 'crearMenus']);
-    Route::post('/menu/actualizarMenus', [MenuController::class, 'actualizarMenus']);
+    // Route::post('/menu/getMenus', [MenuController::class, 'getMenus']);
+    // Route::post('/menu/crearMenus', [MenuController::class, 'crearMenus']);
+    // Route::post('/menu/actualizarMenus', [MenuController::class, 'actualizarMenus']);
 
     // Usuarios
     Route::get('/usuario/getUsuariosFull', [UsuarioController::class, 'getUsuariosFull']);
@@ -45,6 +45,6 @@ Route::group(['middleware' => ['jwt.verify']], function() {
     Route::post('/usuario/actualizarUsuarios', [UsuarioController::class, 'actualizarUsuarios']);
 
     // Usuarios-Menu
-    Route::post('/usuariomenu/crearUsuarioMenu', [UsuarioMenuController::class, 'crearUsuarioMenu']);
-    Route::post('/usuariomenu/actualizarUsuarioMenu', [UsuarioMenuController::class, 'actualizarUsuarioMenu']);
+    // Route::post('/usuariomenu/crearUsuarioMenu', [UsuarioMenuController::class, 'crearUsuarioMenu']);
+    // Route::post('/usuariomenu/actualizarUsuarioMenu', [UsuarioMenuController::class, 'actualizarUsuarioMenu']);
 });
