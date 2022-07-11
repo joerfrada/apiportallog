@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 
 use App\Http\Controllers\AplicacionController;
-use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UsuarioController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,8 +18,8 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-//Home
-Route::post('index', [HomeController::class, 'home']);
+//Login
+Route::post('login', [UsuarioController::class, 'login']);
 
 // Autenticar los controladores
 Route::group(['middleware' => ['jwt.verify']], function() {

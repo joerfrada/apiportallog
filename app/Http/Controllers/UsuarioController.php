@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use JWTAuth;
@@ -14,9 +15,9 @@ use App\Models\Menu;
 use App\Models\Usuario;
 use App\Models\UsuarioMenu;
 
-class HomeController extends Controller
+class UsuarioController extends Controller
 {
-    public function home(Request $request) {
+    public function login(Request $request) {
         $p_usuario = $request->get('usuario');
         $m_usuario = new Usuario();
 
